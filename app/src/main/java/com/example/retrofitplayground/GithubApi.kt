@@ -6,6 +6,6 @@ import retrofit2.http.Path
 
 interface GithubApi {
 
-    @GET("users/{user}/repos")
+    @GET("movie")
     fun getListUserGithub(@Path("user") userName: String): Call<List<ReposDao>>
 }

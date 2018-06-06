@@ -6,9 +6,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitManager {
 
     private fun createRetrofit(): Retrofit = Retrofit.Builder()
-        .baseUrl("https://api.github.com/")
+        .baseUrl("https://workshopup.herokuapp.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun getGithubApi() = createRetrofit().create(GithubApi::class.java)
+    fun getMovieApi() = createRetrofit().create(MovieApi::class.java)
 }
